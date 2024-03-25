@@ -13,9 +13,9 @@ export default function Header({ bigMobile }: { bigMobile: boolean }) {
         <img src="will-it-table-logo.png" className="w-16 md:w-24" />
         <h1 className="pl-8 text-2xl md:text-4xl">Will It Table?</h1>
       </div>
-
       <div>
         <Search placeholder="Search" />
+        {/* Button? */}
       </div>
     </div>
   );
