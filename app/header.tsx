@@ -1,6 +1,7 @@
 import Search from "./search";
 import { concert, philosopher } from "./fonts";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function Header({ bigMobile }: { bigMobile: boolean }) {
   return (
@@ -23,7 +24,9 @@ export default function Header({ bigMobile }: { bigMobile: boolean }) {
         </h1>
       </div>
       <div>
-        <Search placeholder="Search" />
+        <Suspense>
+          <Search placeholder="Search" />
+        </Suspense>
         {/* Button? */}
       </div>
     </div>
