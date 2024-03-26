@@ -4,6 +4,7 @@ import CSClassesComponent from "./CSClassesComponent";
 import TabbedQuotes from "./chatgpt";
 import TabbedClasses from "./display_classes";
 import Header from "./header";
+import { display } from "./fonts";
 
 export default function Home() {
   return (
@@ -14,8 +15,18 @@ export default function Home() {
     // </main>
     <main className="flex flex-col items-center justify-between p-24">
       <Header bigMobile={true} />
+      {/* Explore items */}
+      <div className="pt-12">
+        <h1 className={`${display.className} text-center text-5xl`}>
+          Tabletop games should fit on your table
+        </h1>
+        {/* <p>
+          'Will It Table?' is the ultimate repository of how much table space
+          your games will need.
+        </p> */}
+      </div>
       {/* <CSClassesComponent /> */}
-      <TabbedClasses />
+      {/* <TabbedClasses /> */}
     </main>
   );
 }
