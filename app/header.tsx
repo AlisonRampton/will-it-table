@@ -1,5 +1,5 @@
 import Search from "./search";
-import { display } from "./fonts";
+import { concert, philosopher } from "./fonts";
 import Image from "next/image";
 
 export default function Header({ bigMobile }: { bigMobile: boolean }) {
@@ -18,8 +18,8 @@ export default function Header({ bigMobile }: { bigMobile: boolean }) {
           height={80}
           alt="A board game piece atop a table"
         />
-        <h1 className={`${display.className} pl-8 text-4xl md:text-5xl`}>
-          WILL IT TABLE?
+        <h1 className={`${philosopher.className} pl-8 text-4xl md:text-5xl`}>
+          Will It Table?
         </h1>
       </div>
       <div>

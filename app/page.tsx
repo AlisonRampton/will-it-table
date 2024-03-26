@@ -4,7 +4,7 @@ import CSClassesComponent from "./CSClassesComponent";
 import TabbedQuotes from "./chatgpt";
 import TabbedClasses from "./display_classes";
 import Header from "./header";
-import { display } from "./fonts";
+import { marcellus, philosopher } from "./fonts";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <Header bigMobile={true} />
       {/* Explore items */}
       <div className="pt-12">
-        <h1 className={`${display.className} text-center text-4xl`}>
+        <h1 className={`${marcellus.className} text-center text-4xl`}>
           Tabletop games should fit on your table
         </h1>
         {/* <p>

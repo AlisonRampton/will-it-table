@@ -22,10 +22,11 @@ export default function Search({ placeholder }: { placeholder: string }) {
   }, 300);
   return (
     <div className="w-auto relative flex flex-1 flex-shrink-0">
-      <label htmlFor="search" className="sr-only">
-        Search
-      </label>
       <Suspense>
+        <label htmlFor="search" className="sr-only">
+          Search
+        </label>
+
         <input
           className="peer block w-auto rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 text-gray-900 placeholder:text-gray-500"
           placeholder={placeholder}
