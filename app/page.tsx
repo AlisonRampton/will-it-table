@@ -17,13 +17,12 @@ export default function Home() {
       <Header bigMobile={true} />
       {/* Explore items */}
       <div className="pt-12">
-        <h1 className={`${abz.className} text-center text-4xl`}>
+        <h1 className={`${abz.className} text-center text-4xl pb-8`}>
           Tabletop games should fit on your table
         </h1>
-        {/* <p>
-          'Will It Table?' is the ultimate repository of how much table space
-          your games will need.
-        </p> */}
+        <p className={`${abz.className}`}>
+          Welcome to the ultimate repository of board game table space.
+        </p>
       </div>
       {/* <CSClassesComponent /> */}
       {/* <TabbedClasses /> */}
