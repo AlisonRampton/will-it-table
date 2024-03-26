@@ -17,7 +17,7 @@ export default function Home() {
       <Header bigMobile={true} />
       {/* Explore items */}
       <div className="pt-12">
-        <h1 className={`${display.className} text-center text-5xl`}>
+        <h1 className={`${display.className} text-center text-4xl`}>
           Tabletop games should fit on your table
         </h1>
         {/* <p>
