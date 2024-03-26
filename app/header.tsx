@@ -11,7 +11,11 @@ export default function Header({ bigMobile }: { bigMobile: boolean }) {
       }
     >
       <div className="flex flex-row items-center mb-4">
-        <img src="will-it-table-logo.png" className="w-16 md:w-24" />
+        <img
+          src="will-it-table-logo.png"
+          className="w-16 md:w-24"
+          alt="A board game piece atop a table"
+        />
         <h1 className={`${display.className} pl-8 text-2xl md:text-4xl`}>
           WILL IT TABLE?
         </h1>
