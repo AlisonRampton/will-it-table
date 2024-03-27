@@ -1,24 +1,41 @@
-import Button from "./button";
+import React from "react";
+// Chat GPT
 
-export default function Card({
-  quoteTxt,
-  source,
-}: {
-  quoteTxt: string;
-  source: string;
-}) {
+interface BoardGameProps {
+  name: string;
+  thumbnail: string;
+  complexity: number;
+  minPlayers: number;
+  maxPlayers: number;
+}
+
+const BoardGame: React.FC<BoardGameProps> = ({
+  name,
+  thumbnail,
+  complexity,
+  minPlayers,
+  maxPlayers,
+}) => {
   return (
-    <div
-      className="w-full mt-10 h-auto bg-blue-900 
-      hover:bg-blue-950 rounded-md shadow-md hover:shadow-lg 
-      transition-all flex-col"
-    >
-      <p className="text-left text-white font-sans pl-4 pt-2 pr-2">
-        &quot;{quoteTxt}&quot;
-      </p>
-      <p className="text-right text-slate-400 font-mono pr-4 pb-2">
-        ~ {source}
-      </p>
+    <div className="bg-white shadow-md rounded-lg p-4 w-64">
+      <img
+        src={thumbnail}
+        alt={name}
+        className="w-full h-auto mb-4 rounded-lg"
+      />
+      <div className="text-purple-900 font-semibold text-lg mb-2">{name}</div>
+      <div className="flex items-center mb-2">
+        <span className="text-gray-600 mr-1">Complexity:</span>
+        <span className="text-gray-800">{complexity}</span>
+      </div>
+      <div className="flex items-center">
+        <span className="text-gray-600 mr-1">Players:</span>
+        <span className="text-gray-800">
+          {minPlayers} - {maxPlayers}
+        </span>
+      </div>
     </div>
   );
-}
+};
+
+export default BoardGame;

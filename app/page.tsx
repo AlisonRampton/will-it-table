@@ -2,9 +2,10 @@
 import CSClassesComponent from "./CSClassesComponent";
 
 import TabbedQuotes from "./chatgpt";
-import TabbedClasses from "./display_classes";
 import Header from "./header";
 import { marcellus, philosopher, abz, concert } from "./fonts";
+import CardsColumns from "./cardsColumns";
+import { boardGames } from "./boardGameData";
 
 export default function Home() {
   return (
@@ -18,14 +19,13 @@ export default function Home() {
       {/* Explore items */}
       <div className="pt-12">
         <h1 className={`${abz.className} text-center text-4xl pb-8`}>
-          Tabletop games should fit on your table
+          Tabletop games should fit on your table.
         </h1>
         <p className={`${abz.className}`}>
           Welcome to the ultimate repository of board game table space.
         </p>
       </div>
-      {/* <CSClassesComponent /> */}
-      {/* <TabbedClasses /> */}
+      <CardsColumns boardGames={boardGames} />
     </main>
   );
 }
