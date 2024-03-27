@@ -1,7 +1,5 @@
 "use client";
-import CSClassesComponent from "./CSClassesComponent";
 
-import TabbedQuotes from "./chatgpt";
 import Header from "./header";
 import { marcellus, philosopher, abz, concert } from "./fonts";
 import CardsColumns from "./cardsColumns";
