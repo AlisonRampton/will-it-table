@@ -17,7 +17,7 @@ interface CardsColumnsProps {
 
 const CardsColumns: React.FC<CardsColumnsProps> = ({ boardGames }) => {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="columns-2 justify-center">
       {boardGames.map((game) => (
         <div key={game.id} className="m-4">
           <BoardGame
