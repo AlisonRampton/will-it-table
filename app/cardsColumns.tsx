@@ -17,9 +17,9 @@ interface CardsColumnsProps {
 
 const CardsColumns: React.FC<CardsColumnsProps> = ({ boardGames }) => {
   return (
-    <div className="columns-2 justify-center">
+    <div className="sm:columns-2 lg:columns-3 xl:columns-4 justify-center">
       {boardGames.map((game) => (
-        <div key={game.id} className="m-4">
+        <div key={game.id} className="m-4 break-inside-avoid-column">
           <BoardGame
             name={game.name}
             thumbnail={game.thumbnail}
