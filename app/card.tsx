@@ -7,6 +7,7 @@ interface BoardGameProps {
   complexity: number;
   minPlayers: number;
   maxPlayers: number;
+  avgSize: string;
 }
 
 const BoardGame: React.FC<BoardGameProps> = ({
@@ -15,6 +16,7 @@ const BoardGame: React.FC<BoardGameProps> = ({
   complexity,
   minPlayers,
   maxPlayers,
+  avgSize,
 }) => {
   return (
     <div className="bg-white shadow-md rounded-lg p-4 w-64">
@@ -28,11 +30,15 @@ const BoardGame: React.FC<BoardGameProps> = ({
         <span className="text-gray-600 mr-1">Complexity:</span>
         <span className="text-gray-800">{complexity}</span>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center mb-2">
         <span className="text-gray-600 mr-1">Players:</span>
         <span className="text-gray-800">
           {minPlayers} - {maxPlayers}
         </span>
+      </div>
+      <div className="flex items-center">
+        <span className="text-gray-600 mr-1">Average Size:</span>
+        <span className="text-gray-800">{avgSize}</span>
       </div>
     </div>
   );

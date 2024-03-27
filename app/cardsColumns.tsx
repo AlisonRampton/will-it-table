@@ -9,6 +9,7 @@ interface BoardGameData {
   complexity: number;
   minPlayers: number;
   maxPlayers: number;
+  avgSize: string;
 }
 
 interface CardsColumnsProps {
@@ -26,6 +27,7 @@ const CardsColumns: React.FC<CardsColumnsProps> = ({ boardGames }) => {
             complexity={game.complexity}
             minPlayers={game.minPlayers}
             maxPlayers={game.maxPlayers}
+            avgSize={game.avgSize}
           />
         </div>
       ))}

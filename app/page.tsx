@@ -15,7 +15,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-between p-24">
       <Header bigMobile={true} />
       {/* Explore items */}
-      <div className="pt-12">
+      <div className="pt-12 pb-12">
         <h1 className={`${abz.className} text-center text-4xl pb-8`}>
           Tabletop games should fit on your table.
         </h1>
