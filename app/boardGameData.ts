@@ -98,7 +98,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.19,
     minPlayers: 2,
     maxPlayers: 4,
-    avgSize: "70in x 70in",
+    avgSize: "30in x 30in",
   },
   {
     id: "10",
@@ -118,7 +118,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.33,
     minPlayers: 4,
     maxPlayers: 20,
-    avgSize: "70in x 70in",
+    avgSize: "26in x 10in",
   },
   {
     id: "12",
