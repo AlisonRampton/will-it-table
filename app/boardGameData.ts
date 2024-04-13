@@ -160,4 +160,14 @@ export const boardGames: BoardGameData[] = [
     maxPlayers: 4,
     avgSize: "70in x 70in",
   },
+  {
+    id: "16",
+    name: "Windward",
+    thumbnail:
+      "https://cf.geekdo-images.com/63M83VSO5nApobnjl9mxfg__itemrep/img/vltDtbd-Ak_Mn9zae0zRxihOSlY=/fit-in/246x300/filters:strip_icc()/pic4821604.jpg",
+    complexity: 2.35,
+    minPlayers: 1,
+    maxPlayers: 5,
+    avgSize: "30in x 52in",
+  },
 ];

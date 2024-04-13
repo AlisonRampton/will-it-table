@@ -1,5 +1,6 @@
 import React from "react";
 import BoardGame from "./card";
+import Modal from "./modal";
 // Chat GPT
 
 interface BoardGameData {

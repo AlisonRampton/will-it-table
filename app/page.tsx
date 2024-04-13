@@ -19,7 +19,7 @@ export default function Home() {
         <h1 className={`${abz.className} text-center text-4xl pb-8`}>
           Tabletop games should fit on your table.
         </h1>
-        <p className={`${abz.className}`}>Find the games that can.</p>
+        <p className={`${abz.className}`}>Find the ones that can.</p>
       </div>
       <CardsColumns boardGames={boardGames} />
     </main>
