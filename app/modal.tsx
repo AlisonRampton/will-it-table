@@ -18,6 +18,29 @@ const Modal: React.FC<ModalProps> = ({
   avgSize,
 }) => {
   const [showModal, setShowModal] = React.useState(false);
+
+  // parse average size of game and convert to pixels
+  const parseSize = (size: string) => {
+    const [widthInches, heightInches] = size
+      .toLowerCase()
+      .split("x")
+      .map((dim) => parseFloat(dim));
+    const inchesToPixels = 2; // Conversion factor: 1 inch = 2 pixels
+    return {
+      width: widthInches * inchesToPixels,
+      height: heightInches * inchesToPixels,
+    };
+  };
+
+  // Calculate the size of the rectangle
+  // 50px = 1 foot, so 300px would be 6 feet
+  const { width, height } = parseSize(avgSize);
+  const xOffset = (300 - width) / 2; // Center the rectangle horizontally
+  const yOffset = (150 - height) / 2; // Center the rectangle vertically
+
+  const chairWidth = 30;
+  const chairHeight = 20;
+
   return (
     <>
       <button
@@ -30,7 +53,7 @@ const Modal: React.FC<ModalProps> = ({
       {showModal ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-auto my-6 mx-auto max-w-7xl">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
@@ -46,11 +69,81 @@ const Modal: React.FC<ModalProps> = ({
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto">
+                <div className="relative p-6 flex-auto flex justify-around items-center">
                   <p className="my-4 text-purple-900 text-lg leading-relaxed">
                     Info here I guess
                   </p>
-                  <svg width="400" height="200">
+                  <div className="flex-1 flex justify-center items-center">
+                    <svg
+                      width="300"
+                      height="150"
+                      style={{ backgroundColor: "#92400e" }}
+                    >
+                      <rect //rectangle representing the table
+                        x="40" // Offset for chair placement
+                        y="40" // Offset for chair placement
+                        width="300" //6 feet, avg table width
+                        height="150" //3 feet, avg table length
+                        fill="#b5651d" // Brown rectangle
+                      />
+                      {/* Smaller rectangle dynamically sized and positioned */}
+                      <rect
+                        x={40 + xOffset} //40 for the chairs
+                        y={40 + yOffset} //40 for the chairs
+                        width={width}
+                        height={height}
+                        fill="#FFC107" // Color of the item on the table
+                      />
+
+                      {/* Chairs around the table */}
+                      {/* Left and right chairs, centered vertically */}
+                      <rect
+                        x="5"
+                        y={40 + 150 / 2 - chairHeight / 2}
+                        width={chairWidth}
+                        height={chairHeight}
+                        fill="#6b7280"
+                      />
+                      <rect
+                        x="340"
+                        y={40 + 150 / 2 - chairHeight / 2}
+                        width={chairWidth}
+                        height={chairHeight}
+                        fill="#6b7280"
+                      />
+                      {/* Top and bottom chairs, centered at 0.25 and 0.75 width proportions */}
+                      <rect
+                        x={40 + 0.25 * 300 - chairWidth / 2}
+                        y="5"
+                        width={chairWidth}
+                        height={chairHeight}
+                        fill="#6b7280"
+                      />
+                      <rect
+                        x={40 + 0.75 * 300 - chairWidth / 2}
+                        y="5"
+                        width={chairWidth}
+                        height={chairHeight}
+                        fill="#6b7280"
+                      />
+                      <rect
+                        x={40 + 0.25 * 300 - chairWidth / 2}
+                        y="175"
+                        width={chairWidth}
+                        height={chairHeight}
+                        fill="#6b7280"
+                      />
+                      <rect
+                        x={40 + 0.75 * 300 - chairWidth / 2}
+                        y="175"
+                        width={chairWidth}
+                        height={chairHeight}
+                        fill="#6b7280"
+                      />
+                    </svg>
+                  </div>
+
+                  {/* <svg width="400" height="200">
                     <rect
                       x={200 - 72}
                       y="10"
@@ -58,9 +151,9 @@ const Modal: React.FC<ModalProps> = ({
                       ry="6"
                       width="144"
                       height="144"
-                      fill="#92400e"
+                      fill="#16a34a" //green rectangle
                     />
-                  </svg>
+                  </svg> */}
                 </div>
                 {/*footer*/}
                 {/* <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
@@ -71,7 +164,7 @@ const Modal: React.FC<ModalProps> = ({
                   >
                     Close
                   </button>
-                  <button
+                  <button 
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}

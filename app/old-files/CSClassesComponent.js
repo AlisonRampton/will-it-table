@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import individualCSClasses from "./ParseJson";
-import renderCSClassDetails from "./renderCSClassDetails";
+import renderCSClassDetails from "../renderCSClassDetails";
 import ClassCard from "./class_card";
 
 export const CSClassesComponent = () => {
