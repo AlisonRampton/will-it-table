@@ -73,9 +73,28 @@ const Modal: React.FC<ModalProps> = ({
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-col flex justify-around items-center">
-                  <p className="my-4 text-purple-900 text-lg leading-relaxed">
-                    Info here I guess
-                  </p>
+                  <div className="w-full pb-4">
+                    <div className="flex items-center mb-2">
+                      <span className="text-purple-900 font-semibold mr-1">
+                        Complexity:
+                      </span>
+                      <span className="text-gray-800">{complexity}</span>
+                    </div>
+                    <div className="flex items-center mb-2">
+                      <span className="text-purple-900 font-semibold mr-1">
+                        Players:
+                      </span>
+                      <span className="text-gray-800">
+                        {minPlayers} - {maxPlayers}
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="text-purple-900 font-semibold mr-1">
+                        Size:
+                      </span>
+                      <span className="text-gray-800">{avgSize}</span>
+                    </div>
+                  </div>
                   <div className="flex-1 flex justify-center items-center">
                     <svg
                       width="385"
