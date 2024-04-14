@@ -38,8 +38,11 @@ const Modal: React.FC<ModalProps> = ({
   const xOffset = (300 - width) / 2; // Center the rectangle horizontally
   const yOffset = (150 - height) / 2; // Center the rectangle vertically
 
-  const chairWidth = 30;
-  const chairHeight = 20;
+  const topBottomChairWidth = 62;
+  const topBottomchairHeight = 62;
+
+  const sideChairWidth = 62;
+  const sidechairHeight = 62;
 
   return (
     <>
@@ -75,70 +78,72 @@ const Modal: React.FC<ModalProps> = ({
                   </p>
                   <div className="flex-1 flex justify-center items-center">
                     <svg
-                      width="600"
-                      height="300"
-                      style={{ backgroundColor: "#92400e" }}
+                      width="385"
+                      height="235"
+                      style={{ backgroundColor: "#ffffff" }}
                     >
+                      {/* Chairs around the table */}
+                      {/* Left and right chairs, centered vertically */}
+                      <rect
+                        x="5"
+                        y={40 + 150 / 2 - sidechairHeight / 2}
+                        width={sideChairWidth}
+                        height={sidechairHeight}
+                        fill="#191e31"
+                      />
+                      <rect
+                        x="315"
+                        y={40 + 150 / 2 - sidechairHeight / 2}
+                        width={sideChairWidth}
+                        height={sidechairHeight}
+                        fill="#191e31"
+                      />
+                      {/* Top and bottom chairs, centered at 0.25 and 0.75 width proportions */}
+                      <rect
+                        x={40 + 0.25 * 300 - topBottomChairWidth / 2}
+                        y="5"
+                        width={topBottomChairWidth}
+                        height={topBottomchairHeight}
+                        fill="#191e31"
+                      />
+                      <rect
+                        x={40 + 0.75 * 300 - topBottomChairWidth / 2}
+                        y="5"
+                        width={topBottomChairWidth}
+                        height={topBottomchairHeight}
+                        fill="#191e31"
+                      />
+                      <rect
+                        x={40 + 0.25 * 300 - topBottomChairWidth / 2}
+                        y="165"
+                        width={topBottomChairWidth}
+                        height={topBottomchairHeight}
+                        fill="#191e31"
+                      />
+                      <rect
+                        x={40 + 0.75 * 300 - topBottomChairWidth / 2}
+                        y="165"
+                        width={topBottomChairWidth}
+                        height={topBottomchairHeight}
+                        fill="#191e31"
+                      />
+
+                      {/* Table */}
                       <rect //rectangle representing the table
                         x="40" // Offset for chair placement
                         y="40" // Offset for chair placement
                         width="300" //6 feet, avg table width
                         height="150" //3 feet, avg table length
-                        fill="#b5651d" // Brown rectangle
+                        fill="#6b4e34" // Brown rectangle
                       />
-                      {/* Smaller rectangle dynamically sized and positioned */}
+
+                      {/* Boardgame */}
                       <rect
                         x={40 + xOffset} //40 for the chairs
                         y={40 + yOffset} //40 for the chairs
                         width={width}
                         height={height}
-                        fill="#FFC107" // Color of the item on the table
-                      />
-
-                      {/* Chairs around the table */}
-                      {/* Left and right chairs, centered vertically */}
-                      <rect
-                        x="5"
-                        y={40 + 150 / 2 - chairHeight / 2}
-                        width={chairWidth}
-                        height={chairHeight}
-                        fill="#6b7280"
-                      />
-                      <rect
-                        x="340"
-                        y={40 + 150 / 2 - chairHeight / 2}
-                        width={chairWidth}
-                        height={chairHeight}
-                        fill="#6b7280"
-                      />
-                      {/* Top and bottom chairs, centered at 0.25 and 0.75 width proportions */}
-                      <rect
-                        x={40 + 0.25 * 300 - chairWidth / 2}
-                        y="5"
-                        width={chairWidth}
-                        height={chairHeight}
-                        fill="#6b7280"
-                      />
-                      <rect
-                        x={40 + 0.75 * 300 - chairWidth / 2}
-                        y="5"
-                        width={chairWidth}
-                        height={chairHeight}
-                        fill="#6b7280"
-                      />
-                      <rect
-                        x={40 + 0.25 * 300 - chairWidth / 2}
-                        y="175"
-                        width={chairWidth}
-                        height={chairHeight}
-                        fill="#6b7280"
-                      />
-                      <rect
-                        x={40 + 0.75 * 300 - chairWidth / 2}
-                        y="175"
-                        width={chairWidth}
-                        height={chairHeight}
-                        fill="#6b7280"
+                        fill="#581c87" // Color of the item on the table
                       />
                     </svg>
                   </div>
