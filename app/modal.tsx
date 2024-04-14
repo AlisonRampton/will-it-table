@@ -122,6 +122,8 @@ const Modal: React.FC<ModalProps> = ({
                         width={sideChairWidth}
                         height={sidechairHeight}
                         fill="#191e31"
+                        rx="5"
+                        ry="5"
                       />
                       <rect
                         x="315"
@@ -129,6 +131,8 @@ const Modal: React.FC<ModalProps> = ({
                         width={sideChairWidth}
                         height={sidechairHeight}
                         fill="#191e31"
+                        rx="5"
+                        ry="5"
                       />
                       {/* Top and bottom chairs, centered at 0.25 and 0.75 width proportions */}
                       <rect
@@ -137,6 +141,8 @@ const Modal: React.FC<ModalProps> = ({
                         width={topBottomChairWidth}
                         height={topBottomchairHeight}
                         fill="#191e31"
+                        rx="5"
+                        ry="5"
                       />
                       <rect
                         x={40 + 0.75 * 300 - topBottomChairWidth / 2}
@@ -144,6 +150,8 @@ const Modal: React.FC<ModalProps> = ({
                         width={topBottomChairWidth}
                         height={topBottomchairHeight}
                         fill="#191e31"
+                        rx="5"
+                        ry="5"
                       />
                       <rect
                         x={40 + 0.25 * 300 - topBottomChairWidth / 2}
@@ -151,6 +159,8 @@ const Modal: React.FC<ModalProps> = ({
                         width={topBottomChairWidth}
                         height={topBottomchairHeight}
                         fill="#191e31"
+                        rx="5"
+                        ry="5"
                       />
                       <rect
                         x={40 + 0.75 * 300 - topBottomChairWidth / 2}
@@ -158,6 +168,8 @@ const Modal: React.FC<ModalProps> = ({
                         width={topBottomChairWidth}
                         height={topBottomchairHeight}
                         fill="#191e31"
+                        rx="5"
+                        ry="5"
                       />
 
                       {/* Table */}
@@ -167,6 +179,8 @@ const Modal: React.FC<ModalProps> = ({
                         width="300" //6 feet, avg table width
                         height="150" //3 feet, avg table length
                         fill="#6b4e34" // Brown rectangle
+                        rx="5"
+                        ry="5"
                       />
 
                       {/* Boardgame */}
@@ -175,40 +189,22 @@ const Modal: React.FC<ModalProps> = ({
                         y={40 + yOffset} //40 for the chairs
                         width={width}
                         height={height}
-                        fill="#581c87" // Color of the item on the table
+                        //fill="#581c87" // Color of the item on the table
+                        stroke="#fbbf24"
+                        stroke-width="3"
+                        rx="5"
+                        ry="5"
+                        fill-opacity="0"
                       />
                     </svg>
                   </div>
-
-                  {/* <svg width="400" height="200">
-                    <rect
-                      x={200 - 72}
-                      y="10"
-                      rx="6"
-                      ry="6"
-                      width="144"
-                      height="144"
-                      fill="#16a34a" //green rectangle
-                    />
-                  </svg> */}
+                  <div className="flex items-center mb-2">
+                    <span className="text-purple-900 font-semibold mr-1">
+                      Table Size: 6 x 3 ft
+                    </span>
+                    {/* <span className="text-gray-800">{complexity}</span> */}
+                  </div>
                 </div>
-                {/*footer*/}
-                {/* <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-                  <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Close
-                  </button>
-                  <button 
-                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Save Changes
-                  </button> 
-                </div> */}
               </div>
             </div>
           </div>
