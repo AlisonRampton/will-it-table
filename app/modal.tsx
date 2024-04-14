@@ -69,29 +69,42 @@ const Modal: React.FC<ModalProps> = ({
                   </button>
                 </div>
                 {/*body*/}
+
                 <div className="relative p-6 flex-col flex justify-around items-center">
-                  <div className="w-full pb-4">
-                    <div className="flex items-center mb-2">
-                      <span className="text-purple-900 font-semibold mr-1">
-                        Complexity:
-                      </span>
-                      <span className="text-gray-800">{complexity}</span>
+                  <div className="flex-row flex justify-stretch w-full">
+                    <div className="w-full pb-4">
+                      <div className="flex items-center mb-2">
+                        <span className="text-purple-900 font-semibold mr-1">
+                          Complexity:
+                        </span>
+                        <span className="text-gray-800">{complexity}</span>
+                      </div>
+                      <div className="flex items-center mb-2">
+                        <span className="text-purple-900 font-semibold mr-1">
+                          Players:
+                        </span>
+                        <span className="text-gray-800">
+                          {minPlayers} - {maxPlayers}
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <span className="text-purple-900 font-semibold mr-1">
+                          Size:
+                        </span>
+                        <span className="text-gray-800">{avgSize}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center mb-2">
-                      <span className="text-purple-900 font-semibold mr-1">
-                        Players:
-                      </span>
-                      <span className="text-gray-800">
-                        {minPlayers} - {maxPlayers}
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-purple-900 font-semibold mr-1">
-                        Size:
-                      </span>
-                      <span className="text-gray-800">{avgSize}</span>
+                    <div>
+                      <img
+                        src={thumbnail}
+                        alt={name}
+                        className="w-auto h-auto mb-4 rounded-lg"
+                      />
                     </div>
                   </div>
+                  <span className="text-purple-900 font-semibold mr-1">
+                    Scale Diagram:
+                  </span>
                   <div className="flex-1 flex justify-center items-center">
                     <svg
                       width="600"
