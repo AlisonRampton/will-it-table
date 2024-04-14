@@ -31,3 +31,14 @@ body {
     text-wrap: balance;
   }
 }
+
+.filter-positioning {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.filter-container input {
+  color: black;
+}

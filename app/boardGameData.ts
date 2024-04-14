@@ -173,4 +173,24 @@ export const boardGames: BoardGameData[] = [
     maxPlayers: 5,
     avgSize: "52in x 30in",
   },
+  {
+    id: "17",
+    name: "Cats & Boxes",
+    thumbnail:
+      "https://www.smartgamesusa.com/sites/default/files/SG_Cats%26Boxes_PDPbanner-EN.jpg",
+    complexity: 1.29,
+    minPlayers: 1,
+    maxPlayers: 1,
+    avgSize: "12in x 10in",
+  },
+  {
+    id: "18",
+    name: "Scrabble",
+    thumbnail:
+      "https://cf.geekdo-images.com/mVmmntn2oQd0PfFrWBvwIQ__imagepage/img/jMu8xW0e_AZpYaBmZN0IRm04jKQ=/fit-in/900x600/filters:no_upscale():strip_icc()/pic404651.jpg",
+    complexity: 2.06,
+    minPlayers: 2,
+    maxPlayers: 4,
+    avgSize: "24in x 24in",
+  },
 ];
