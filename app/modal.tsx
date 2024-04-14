@@ -69,14 +69,14 @@ const Modal: React.FC<ModalProps> = ({
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto flex justify-around items-center">
+                <div className="relative p-6 flex-col flex justify-around items-center">
                   <p className="my-4 text-purple-900 text-lg leading-relaxed">
                     Info here I guess
                   </p>
                   <div className="flex-1 flex justify-center items-center">
                     <svg
-                      width="300"
-                      height="150"
+                      width="600"
+                      height="300"
                       style={{ backgroundColor: "#92400e" }}
                     >
                       <rect //rectangle representing the table
