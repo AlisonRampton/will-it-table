@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Card from "./card";
-import Button from "./button";
+import Button from "./old-files/button";
 import individualCSClasses, {
   EnhancedClass,
   setEmphasisCategorization,
-} from "./ParseJson";
+} from "./old-files/ParseJson";
 import { Class, Emphasis } from "./definitions";
-import ClassCard from "./class_card";
+import ClassCard from "./old-files/class_card";
 
 const TabbedClasses: React.FC = () => {
   const [classes, setClasses] = useState<EnhancedClass[]>([]);
