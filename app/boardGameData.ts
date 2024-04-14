@@ -9,6 +9,8 @@ export interface BoardGameData {
   avgSize: string;
 }
 
+// when changing the avgSize value, place the larger value first to look better
+// in the "See More Info" button table
 export const boardGames: BoardGameData[] = [
   {
     id: "1",
@@ -168,6 +170,6 @@ export const boardGames: BoardGameData[] = [
     complexity: 2.35,
     minPlayers: 1,
     maxPlayers: 5,
-    avgSize: "30in x 52in",
+    avgSize: "52in x 30in",
   },
 ];
