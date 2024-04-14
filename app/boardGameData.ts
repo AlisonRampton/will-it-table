@@ -32,13 +32,13 @@ export const boardGames: BoardGameData[] = [
   },
   {
     id: "3",
-    name: "Monopoly",
+    name: "Railroad Ink: Deep Blue Edition",
     thumbnail:
-      "https://cf.geekdo-images.com/9nGoBZ0MRbi6rdH47sj2Qg__itemrep/img/8EP4ErNA709diOt6fUyJH30FtbU=/fit-in/246x300/filters:strip_icc()/pic5786795.jpg",
-    complexity: 1.62,
-    minPlayers: 2,
-    maxPlayers: 8,
-    avgSize: "70in x 70in",
+      "https://cf.geekdo-images.com/x3hjEgkxZE9M96o6wgj6Tw__itemrep/img/MpwGSYawrf0hcH-7Gc0z-lhUCvo=/fit-in/246x300/filters:strip_icc()/pic4097632.png",
+    complexity: 1.47,
+    minPlayers: 1,
+    maxPlayers: 6,
+    avgSize: "25in x 25in",
   },
   {
     id: "4",
@@ -62,13 +62,13 @@ export const boardGames: BoardGameData[] = [
   },
   {
     id: "6",
-    name: "Balderdash",
+    name: "The Legend of the Cherry Tree that Blossoms Every Ten Years",
     thumbnail:
-      "https://cf.geekdo-images.com/hXNqiCcLt9AJzcqBSsyKiQ__itemrep/img/Iz0L0PnYho_f_VHNvgYfrrmMcsc=/fit-in/246x300/filters:strip_icc()/pic5121000.jpg",
-    complexity: 1.4,
+      "https://cf.geekdo-images.com/UuAF29nmbvDg5bILPBPrIg__itemrep/img/Eb0MsLicSG8QMbDuTn9sg8JL7bg=/fit-in/246x300/filters:strip_icc()/pic3907805.png",
+    complexity: 1.47,
     minPlayers: 2,
-    maxPlayers: 6,
-    avgSize: "70in x 70in",
+    maxPlayers: 4,
+    avgSize: "24in x 24in",
   },
   {
     id: "7",
@@ -168,6 +168,6 @@ export const boardGames: BoardGameData[] = [
     complexity: 2.35,
     minPlayers: 1,
     maxPlayers: 5,
-    avgSize: "30in x 52in",
+    avgSize: "52in x 30in",
   },
 ];
