@@ -18,7 +18,7 @@ export default function Header({ bigMobile }: { bigMobile: boolean }) {
           width={80}
           height={80}
           alt="A board game piece atop a table"
-          className="dark:bg-gradient-radial dark:from-blue-300 dark:from-0% dark:via-transparent dark:via-80%"
+          // className="dark:bg-gradient-radial dark:from-blue-300 dark:from-0% dark:via-transparent dark:via-80%"
         />
         <h1 className={`${philosopher.className} pl-8 text-4xl md:text-5xl`}>
           Will It Table?

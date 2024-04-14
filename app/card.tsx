@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "./modal";
 // Chat GPT
 
 interface BoardGameProps {
@@ -37,8 +38,18 @@ const BoardGame: React.FC<BoardGameProps> = ({
         </span>
       </div>
       <div className="flex items-center">
-        <span className="text-gray-600 mr-1">Average Size:</span>
+        <span className="text-gray-600 mr-1">Size:</span>
         <span className="text-gray-800">{avgSize}</span>
+      </div>
+      <div className="mt-2 items-center">
+        <Modal
+          name={name}
+          thumbnail={thumbnail}
+          complexity={complexity}
+          minPlayers={minPlayers}
+          maxPlayers={maxPlayers}
+          avgSize={avgSize}
+        />
       </div>
     </div>
   );

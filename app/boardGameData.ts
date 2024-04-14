@@ -98,7 +98,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.19,
     minPlayers: 2,
     maxPlayers: 4,
-    avgSize: "70in x 70in",
+    avgSize: "30in x 30in",
   },
   {
     id: "10",
@@ -118,7 +118,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.33,
     minPlayers: 4,
     maxPlayers: 20,
-    avgSize: "70in x 70in",
+    avgSize: "26in x 10in",
   },
   {
     id: "12",
@@ -159,5 +159,15 @@ export const boardGames: BoardGameData[] = [
     minPlayers: 2,
     maxPlayers: 4,
     avgSize: "70in x 70in",
+  },
+  {
+    id: "16",
+    name: "Windward",
+    thumbnail:
+      "https://cf.geekdo-images.com/63M83VSO5nApobnjl9mxfg__itemrep/img/vltDtbd-Ak_Mn9zae0zRxihOSlY=/fit-in/246x300/filters:strip_icc()/pic4821604.jpg",
+    complexity: 2.35,
+    minPlayers: 1,
+    maxPlayers: 5,
+    avgSize: "30in x 52in",
   },
 ];
