@@ -8,9 +8,10 @@ export interface BoardGameData {
   maxPlayers: number;
   avgSize: string;
 }
-
+// ----------------------------------------- SIZE INFORMATION -------------------------------
 // when changing the avgSize value, place the larger value first to look better
 // in the "See More Info" button table
+// ----------------------------------------- SIZE INFORMATION -------------------------------
 export const boardGames: BoardGameData[] = [
   {
     id: "1",
