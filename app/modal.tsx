@@ -25,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({
       .toLowerCase()
       .split("x")
       .map((dim) => parseFloat(dim));
-    const inchesToPixels = 2; // Conversion factor: 1 inch = 2 pixels
+    const inchesToPixels = 4.1667; // Conversion factor: 1 inch = 2 pixels
     return {
       width: widthInches * inchesToPixels,
       height: heightInches * inchesToPixels,
