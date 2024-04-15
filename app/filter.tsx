@@ -64,7 +64,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
           <div className="flex justify-between space-x-4">
             <input
               type="number"
-              placeholder="Width"
+              placeholder="Width (in)"
               value={width}
               onChange={(e) => setWidth(e.target.value)}
               className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black py-3 px-4 text-lg"
@@ -72,7 +72,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
 
             <input
               type="number"
-              placeholder="Length"
+              placeholder="Length (in)"
               value={length}
               onChange={(e) => setLength(e.target.value)}
               className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black py-3 px-4 text-lg"
