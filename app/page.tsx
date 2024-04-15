@@ -12,11 +12,11 @@ export default function Home() {
 
   const handleFilterChange = (filter: {
     name: string;
-    minPlayers: string;
-    maxPlayers: string;
+    playersCount: string;
     size: string;
   }) => {
     const filtered = boardGames.filter((game) => {
+      const numPlayers = parseInt(filter.playersCount);
       const [filterWidth, filterLength] = filter.size
         .split(" x ")
         .map((dim) => parseInt(dim));
@@ -31,12 +31,8 @@ export default function Home() {
         (filter.name
           ? game.name.toLowerCase().includes(filter.name.toLowerCase())
           : true) &&
-        (filter.minPlayers
-          ? game.minPlayers >= parseInt(filter.minPlayers)
-          : true) &&
-        (filter.maxPlayers
-          ? game.maxPlayers <= parseInt(filter.maxPlayers)
-          : true) &&
+        (!filter.playersCount ||
+          (numPlayers >= game.minPlayers && numPlayers <= game.maxPlayers)) &&
         (isNaN(filterWidth) || gameWidth <= filterWidth) && // Ensure game width is less than or equal to filter width
         (isNaN(filterLength) || gameLength <= filterLength) // Ensure game length is less than or equal to filter length
       );
