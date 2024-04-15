@@ -17,9 +17,14 @@ export default function Home() {
     size: string;
   }) => {
     const filtered = boardGames.filter((game) => {
+      // Parse min and max players from the filter
+      const minPlayersFilter = parseInt(filter.minPlayers);
+      const maxPlayersFilter =
+        filter.maxPlayers === "8+" ? Infinity : parseInt(filter.maxPlayers);
+
       const [filterWidth, filterLength] = filter.size
         .split(" x ")
-        .map((dim) => parseInt(dim));
+        .map((dim) => parseInt(dim.replace("in", "").trim()));
 
       // Parse width and length from each game's avgSize
       const [gameWidth, gameLength] = game.avgSize
@@ -28,17 +33,12 @@ export default function Home() {
         .map(Number);
 
       return (
-        (filter.name
-          ? game.name.toLowerCase().includes(filter.name.toLowerCase())
-          : true) &&
-        (filter.minPlayers
-          ? game.minPlayers >= parseInt(filter.minPlayers)
-          : true) &&
-        (filter.maxPlayers
-          ? game.maxPlayers <= parseInt(filter.maxPlayers)
-          : true) &&
-        (isNaN(filterWidth) || gameWidth <= filterWidth) && // Ensure game width is less than or equal to filter width
-        (isNaN(filterLength) || gameLength <= filterLength) // Ensure game length is less than or equal to filter length
+        (!filter.name ||
+          game.name.toLowerCase().includes(filter.name.toLowerCase())) &&
+        (!filter.minPlayers || game.minPlayers <= maxPlayersFilter) && // Game can be played by up to maxPlayers
+        (!filter.maxPlayers || game.maxPlayers >= minPlayersFilter) && // Game requires at least minPlayers
+        (isNaN(filterWidth) || gameWidth <= filterWidth) &&
+        (isNaN(filterLength) || gameLength <= filterLength)
       );
     });
     setFilteredGames(filtered);

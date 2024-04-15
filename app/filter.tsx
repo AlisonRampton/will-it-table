@@ -25,6 +25,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
       maxPlayers: maxPlayers === 8 ? "8+" : maxPlayers.toString(),
       size: width && length ? size : "",
     });
+    console.log(`MinPlayers: ${minPlayers}, MaxPlayers: ${maxPlayers}`);
   };
 
   return (
@@ -46,9 +47,11 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
           min="1"
           max="8"
           value={minPlayers}
-          onChange={(e) => {
-            setMinPlayers(Number(e.target.value));
+          onInput={(e) => {
+            const target = e.target as HTMLInputElement;
+            setMinPlayers(Number(target.value));
             handleFilterChange();
+            console.log(`in the return: minPlayers: ${minPlayers}`);
           }}
         />
       </div>
@@ -60,7 +63,8 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
           max="8"
           value={maxPlayers}
           onChange={(e) => {
-            setMaxPlayers(Number(e.target.value));
+            const target = e.target as HTMLInputElement;
+            setMaxPlayers(Number(target.value));
             handleFilterChange();
           }}
         />
