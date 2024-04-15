@@ -4,16 +4,14 @@ import { useState } from "react";
 interface FilterProps {
   onFilterChange: (filter: {
     name: string;
-    minPlayers: string;
-    maxPlayers: string;
+    playersCount: string;
     size: string;
   }) => void;
 }
 
 export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
   const [name, setName] = useState("");
-  const [minPlayers, setMinPlayers] = useState(1);
-  const [maxPlayers, setMaxPlayers] = useState(8);
+  const [playersCount, setPlayersCount] = useState(""); // Store the number of players
   const [width, setWidth] = useState(""); // For width in inches
   const [length, setLength] = useState(""); // For length in inches
 
@@ -21,11 +19,9 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
     const size = `${width}in x ${length}in`;
     onFilterChange({
       name,
-      minPlayers: minPlayers.toString(),
-      maxPlayers: maxPlayers === 8 ? "8+" : maxPlayers.toString(),
+      playersCount,
       size,
     });
-    console.log(`minPlayers: ${minPlayers}`);
   };
 
   return (
@@ -39,27 +35,12 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
         }}
       />
       <div>
-        Min Players: {minPlayers}
+        How many players do you have?
         <input
-          type="range"
-          min="1"
-          max="8"
-          value={minPlayers}
-          onChange={(e) => {
-            setMinPlayers(Number(e.target.value));
-          }}
-        />
-      </div>
-      <div>
-        Max Players: {maxPlayers === 8 ? "8+" : maxPlayers}
-        <input
-          type="range"
-          min="1"
-          max="8"
-          value={maxPlayers}
-          onChange={(e) => {
-            setMaxPlayers(Number(e.target.value));
-          }}
+          type="number"
+          placeholder="Number of players"
+          value={playersCount}
+          onChange={(e) => setPlayersCount(e.target.value)}
         />
       </div>
       <div style={{ marginTop: "20px" }}>
@@ -83,10 +64,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
           />{" "}
           in
         </label>
-        <button
-          onClick={handleSavePreferences}
-          disabled={!width || !length || !minPlayers || !maxPlayers}
-        >
+        <button onClick={handleSavePreferences} disabled={!width || !length}>
           Save Preferences
         </button>
       </div>
