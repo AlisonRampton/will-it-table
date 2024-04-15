@@ -17,14 +17,15 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
   const [width, setWidth] = useState(""); // For width in inches
   const [length, setLength] = useState(""); // For length in inches
 
-  const handleFilterChange = () => {
+  const handleSavePreferences = () => {
     const size = `${width}in x ${length}in`;
     onFilterChange({
       name,
       minPlayers: minPlayers.toString(),
       maxPlayers: maxPlayers === 8 ? "8+" : maxPlayers.toString(),
-      size: width && length ? size : "",
+      size,
     });
+    console.log(`minPlayers: ${minPlayers}`);
   };
 
   return (
@@ -35,9 +36,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
         value={name}
         onChange={(e) => {
           setName(e.target.value);
-          handleFilterChange();
         }}
-        //onBlur={handleFilterChange}
       />
       <div>
         Min Players: {minPlayers}
@@ -48,7 +47,6 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
           value={minPlayers}
           onChange={(e) => {
             setMinPlayers(Number(e.target.value));
-            handleFilterChange();
           }}
         />
       </div>
@@ -61,7 +59,6 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
           value={maxPlayers}
           onChange={(e) => {
             setMaxPlayers(Number(e.target.value));
-            handleFilterChange();
           }}
         />
       </div>
@@ -72,10 +69,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
             type="number"
             placeholder="Width"
             value={width}
-            onChange={(e) => {
-              setWidth(e.target.value || "");
-              handleFilterChange();
-            }}
+            onChange={(e) => setWidth(e.target.value)}
           />{" "}
           in
         </label>
@@ -85,13 +79,16 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
             type="number"
             placeholder="Length"
             value={length}
-            onChange={(e) => {
-              setLength(e.target.value || "");
-              handleFilterChange();
-            }}
+            onChange={(e) => setLength(e.target.value)}
           />{" "}
           in
         </label>
+        <button
+          onClick={handleSavePreferences}
+          disabled={!width || !length || !minPlayers || !maxPlayers}
+        >
+          Save Preferences
+        </button>
       </div>
     </div>
   );
