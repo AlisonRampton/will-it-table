@@ -21,7 +21,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.89,
     minPlayers: 2,
     maxPlayers: 5,
-    avgSize: "70in x 70in",
+    avgSize: "24in x 24in",
   },
   {
     id: "2",
@@ -31,7 +31,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 2.57,
     minPlayers: 3,
     maxPlayers: 7,
-    avgSize: "70in x 70in",
+    avgSize: "40in x 30in",
   },
   {
     id: "3",
@@ -51,7 +51,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.2,
     minPlayers: 3,
     maxPlayers: 6,
-    avgSize: "70in x 70in",
+    avgSize: "34in x 24in",
   },
   {
     id: "5",
@@ -61,7 +61,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.26,
     minPlayers: 2,
     maxPlayers: 8,
-    avgSize: "70in x 70in",
+    avgSize: "22in x 18in",
   },
   {
     id: "6",
@@ -81,7 +81,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.37,
     minPlayers: 3,
     maxPlayers: 10,
-    avgSize: "70in x 70in",
+    avgSize: "24in x 24in",
   },
   {
     id: "8",
@@ -91,7 +91,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.25,
     minPlayers: 2,
     maxPlayers: 6,
-    avgSize: "70in x 70in",
+    avgSize: "26in x 26in",
   },
   {
     id: "9",
@@ -111,7 +111,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.3,
     minPlayers: 2,
     maxPlayers: 8,
-    avgSize: "70in x 70in",
+    avgSize: "40in x 20in",
   },
   {
     id: "11",
@@ -131,7 +131,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 2.82,
     minPlayers: 1,
     maxPlayers: 4,
-    avgSize: "70in x 70in",
+    avgSize: "44in x 30in",
   },
   {
     id: "13",
@@ -141,7 +141,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 2.4,
     minPlayers: 2,
     maxPlayers: 4,
-    avgSize: "70in x 70in",
+    avgSize: "32in x 24in",
   },
   {
     id: "14",
@@ -151,7 +151,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 2.29,
     minPlayers: 3,
     maxPlayers: 4,
-    avgSize: "70in x 70in",
+    avgSize: "42in x 30in",
   },
   {
     id: "15",
@@ -161,7 +161,7 @@ export const boardGames: BoardGameData[] = [
     complexity: 1.98,
     minPlayers: 2,
     maxPlayers: 4,
-    avgSize: "70in x 70in",
+    avgSize: "50in x 30in",
   },
   {
     id: "16",
