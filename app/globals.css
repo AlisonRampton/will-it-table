@@ -42,3 +42,9 @@ body {
 .filter-container input {
   color: black;
 }
+
+.filter-buttons-positioning {
+  position: absolute;
+  padding: 20px;
+  align-self: center;
+}

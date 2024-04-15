@@ -27,14 +27,21 @@ export default function Home() {
         .split(" x ")
         .map(Number);
 
+      const fitsWidthLength =
+        gameWidth <= filterWidth && gameLength <= filterLength;
+      const fitsLengthWidth =
+        gameWidth <= filterLength && gameLength <= filterWidth;
+
       return (
         (filter.name
           ? game.name.toLowerCase().includes(filter.name.toLowerCase())
           : true) &&
         (!filter.playersCount ||
           (numPlayers >= game.minPlayers && numPlayers <= game.maxPlayers)) &&
-        (isNaN(filterWidth) || gameWidth <= filterWidth) && // Ensure game width is less than or equal to filter width
-        (isNaN(filterLength) || gameLength <= filterLength) // Ensure game length is less than or equal to filter length
+        (isNaN(filterWidth) ||
+          isNaN(filterLength) ||
+          fitsWidthLength ||
+          fitsLengthWidth) // Check both dimension arrangements
       );
     });
     setFilteredGames(filtered);
