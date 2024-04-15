@@ -24,12 +24,12 @@ export default function Header({ bigMobile }: { bigMobile: boolean }) {
           Will It Table?
         </h1>
       </div>
-      <div>
+      {/* <div>
         <Suspense>
           <Search placeholder="Search" />
         </Suspense>
-        {/* Button? */}
-      </div>
+        {/* Button? 
+      </div> */}
     </div>
   );
 }
