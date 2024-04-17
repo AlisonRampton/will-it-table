@@ -87,7 +87,7 @@ export const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
             </button>{" "}
             <button
               onClick={resetFilters}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-black py-3 px-6 text-lg"
+              className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-black py-3 px-6 text-lg"
             >
               Start Over
             </button>
